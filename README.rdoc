@@ -1,0 +1,10 @@
+== README
+
+## IE8
+https://github.com/scottjehl/Respond
+https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+
+https://github.com/aFarkas/html5shiv
+https://github.com/aFarkas/html5shiv/blob/master/MIT%20and%20GPL2%20licenses.md
+
+
