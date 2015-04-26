@@ -1,0 +1,5 @@
+.chosen-container .chosen-results li.highlighted {
+  background-color: #158CBA;
+  @include background-image(linear-gradient(#158CBA 20%, #127ba3 90%));
+  color: #fff;
+ }
