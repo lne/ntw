@@ -23,6 +23,12 @@
     <%= f.label :age %><br>
     <%= f.number_field :age %>
   </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.select :age, [["1", 1], ["2", 2]],{include_blank: true}, {class: 'chosen-select'} %>
+    <%= f.select :age, [["1", 1], ["2", 2], ["3", 3], ["4", 4]],{include_blank: true}, {class: 'chosen-select'} %>
+  </div>
+  <%= select_tag "name", options_for_select([["1", 1], ["2", 2], ["3", 3], ["4", 4]]), include_blank: true, class: 'chosen-select' %>
   <div class="actions">
     <%= f.submit %>
   </div>

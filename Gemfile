@@ -6,7 +6,8 @@ gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#gem 'sass-rails', '~> 5.0'
+gem 'sass-rails',  github: "rails/sass-rails", branch: "master"
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -16,6 +17,12 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.4'
+# This gem gives you complete # scss versions of bootswatches for use.
+gem 'bootswatch-rails'
+# Chosen is a library for making long, unwieldy select boxes more user friendly.
+gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+gem 'chosen-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
