@@ -18,7 +18,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.4'
 # This gem gives you complete # scss versions of bootswatches for use.
-gem 'bootswatch-rails'
+#gem 'bootswatch-rails'
 # Chosen is a library for making long, unwieldy select boxes more user friendly.
 gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
 gem 'chosen-rails'
