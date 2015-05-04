@@ -20,8 +20,8 @@ gem 'bootstrap-sass', '~> 3.3.4'
 # This gem gives you complete # scss versions of bootswatches for use.
 #gem 'bootswatch-rails'
 # Chosen is a library for making long, unwieldy select boxes more user friendly.
-gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
-gem 'chosen-rails'
+#gem 'compass-rails', github: 'Compass/compass-rails', branch: 'master'
+#gem 'chosen-rails'
 
 
 # Use jquery as the JavaScript library
