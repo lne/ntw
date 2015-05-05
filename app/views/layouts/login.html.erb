@@ -3,27 +3,43 @@
 <head>
   <title>Ntw</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <%= stylesheet_link_tag    'ie8', media: 'all', 'data-turbolinks-track' => true %>
-  <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <%= stylesheet_link_tag    'ie8' %>
+  <%= javascript_include_tag 'ie8' %>
+  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div class="topbar">
   </div>
-<div class="well">
-  <%= form_tag controller: "users", action: "logon" do %>
-    <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
-      <input class="form-control" placeholder="Email address" type="text">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="login-area">
+        <div class="well col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+          <%= form_tag controller: "users", action: "logon" do %>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+              <input class="form-control" placeholder="Email address" type="text">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+              <input class="form-control" placeholder="Password" type="password">
+            </div>
+            <div class="form-group checkbox">
+              <label class="pull-right">
+                <input type="checkbox"><span>Remember Me</span>
+              </label>
+            </div>
+            <div class="form-group button-area">
+              <%= button_tag type: "submit", class: 'btn btn-primary btm-sm' do %>
+                <span>Login</span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div class="input-group">
-      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-      <input class="form-control" placeholder="Password" type="password">
-    </div>
-    <%= submit_tag("Search") %>
-  <% end %>
-</div>
+  </div>
 </body>
 </html>

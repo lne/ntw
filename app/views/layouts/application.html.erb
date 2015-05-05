@@ -3,10 +3,11 @@
 <head>
   <title>Ntw</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <%= stylesheet_link_tag    'ie8', media: 'all', 'data-turbolinks-track' => true %>
-  <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <%= stylesheet_link_tag    'ie8' %>
+  <%= javascript_include_tag 'ie8' %>
+  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body>
