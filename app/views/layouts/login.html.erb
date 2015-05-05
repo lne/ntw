@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ntw</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+  <%= stylesheet_link_tag    'ie8', media: 'all', 'data-turbolinks-track' => true %>
+  <![endif]-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="topbar">
+  </div>
+<div class="well">
+  <%= form_tag controller: "users", action: "logon" do %>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+      <input class="form-control" placeholder="Email address" type="text">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+      <input class="form-control" placeholder="Password" type="password">
+    </div>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>
+</body>
+</html>

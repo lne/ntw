@@ -13,4 +13,13 @@
       padding-bottom: 0;
     }
   }
+
+  button {
+    &[type="submit"] {
+      width: 80px;
+      span {
+        margin-left: 2px;
+      }
+    }
+  }
 }
