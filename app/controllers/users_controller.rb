@@ -1,25 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  # GET /login
-  def login
-    render layout: 'login'
-  end
-
-  # POST /login
-  def logon
-    #TODO: modify dummy logic
-    if params[:password].blank?
-      # error
-    end
-    if params[:email].blank?
-      session[:user] = {name: 'Admin', role: 'Admin'}
-    else
-      session[:user] = {name: 'DummyUser', role: 'Standard'}
-    end
-    #redirect_to 'mails/dashboard'
-    redirect_to action: :index
-  end
   # GET /users
   # GET /users.json
   def index

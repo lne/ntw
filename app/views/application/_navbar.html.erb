@@ -12,12 +12,14 @@
       <ul class="nav navbar-nav">
         <%= navicon('Mails', active: true, icon_name: 'envelope', target: '/mails') %>
         <%= navicon('Files', icon_name: 'file', target: '/files') %>
-        <%= navicon('Users', icon_name: 'users', target: '/users') %>
-        <%= navicon('Domains', icon_name: 'cloud', target: '/domains') %>
+        <% unless @account['role'] == "StandardUser" %>
+          <%= navicon('Users', icon_name: 'users', target: '/users') %>
+          <%= navicon('Domains', icon_name: 'cloud', target: '/domains') %>
+        <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <%= navicon('Account', icon_name: 'user', target: '/account') %>
-        <%= navicon('Logout', icon_name: 'sign-out', target: '/account/logout') %>
+        <%= navicon('Logout', icon_name: 'sign-out', target: logout_path) %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.row -->

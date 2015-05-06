@@ -1,6 +1,4 @@
 class AccountController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
   # GET /login
   def login
     render layout: 'login'
@@ -18,9 +16,17 @@ class AccountController < ApplicationController
     when 'admin@abc.com'
       session[:user] = {name: 'admin', role: 'DomainAdmin', domain: 'abc.com'}
     else
-      session[:user] = {name: 'DummyUser', role: 'Standard', domain: 'abc.com'}
+      session[:user] = {name: 'DummyUser', role: 'StandardUser', domain: 'abc.com'}
     end
+    @account = session[:user]
     #redirect_to 'mails/dashboard'
-    redirect_to action: :index, controller: :mails
+    #redirect_to action: :index, controller: :mails
+    redirect_to action: :index, controller: :users
+  end
+
+  # GET /logout
+  def logout
+    session[:user] = nil
+    redirect_to root_path
   end
 end
