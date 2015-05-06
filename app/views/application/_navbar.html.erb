@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+  <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="col-sm-2 col-lg-2 navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+        <%= icon 'bars' %>
+      </button>
+      <a class="navbar-brand" href="#">あいうえお</a>
+    </div><!-- /.navbar-header -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <%= navicon('Mails', active: true, icon_name: 'envelope', target: '/mails') %>
+        <%= navicon('Files', icon_name: 'file', target: '/files') %>
+        <%= navicon('Users', icon_name: 'users', target: '/users') %>
+        <%= navicon('Domains', icon_name: 'cloud', target: '/domains') %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <%= navicon('Account', icon_name: 'user', target: '/account') %>
+        <%= navicon('Logout', icon_name: 'sign-out', target: '/account/logout') %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.row -->
+</div><!-- /.container-fluid -->

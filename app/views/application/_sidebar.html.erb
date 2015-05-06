@@ -1,0 +1,12 @@
+<div class="nav-canvas">
+  <ul class="nav nav-pills nav-stacked main-menu">
+    <li class="nav-header">
+      <p>Who</p>
+      <p>@example.domain.com</p>
+    </li>
+    <%= navicon('Dashboard', icon_name: :home,        target: '/', active: true) %>
+    <%= navicon('MailList',  icon_name: 'envelope-o', target: '/mails') %>
+    <%= navicon('History',   icon_name: :history,     target: '/mails/history') %>
+    <%= navicon('Setting',   icon_name: :cog,         target: '/setting') %>
+  </ul>
+</div>

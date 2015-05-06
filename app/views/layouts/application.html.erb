@@ -1,68 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ntw</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!--[if (lt IE 9) & (!IEMobile)]>
-  <%= stylesheet_link_tag    'ie8' %>
-  <%= javascript_include_tag 'ie8' %>
-  <![endif]-->
-  <%= csrf_meta_tags %>
+<%= render "header" %>
 </head>
 <body>
   <div class="topbar">
   </div>
   <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="row">
-      <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="col-sm-2 col-lg-2 navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse", id="navbar-toggle-icon">
-            <%= icon 'bars' %>
-          </button>
-          <a class="navbar-brand" href="#">あいうえお</a>
-        </div>
-  
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><%= icon 'envelope' %><span>Mails</span></a></li>
-            <li><a href="#"><%= icon 'file' %><span>Files</span></a></li>
-            <li><a href="#"><%= icon 'users' %><span>Users</span></a></li>
-            <li><a href="#"><%= icon 'cloud' %><span>Domains</span></a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><%= icon 'user' %><span>Account</span></a></li>
-          <li><a href="#"><%= icon 'sign-out' %><span>Logout</span></a></li>
-        </ul>
-        </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    <%= render "navbar" %>
   </nav>
   <div id="main">
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-2 col-lg-2">
           <div class="sidebar-nav">
-            <div class="nav-canvas">
-              <div class="nav-sm nav nav-stacked">
-              </div>
-              <ul class="nav nav-pills nav-stacked main-menu">
-                <li class="nav-header">
-                  <p>Who</p>
-                  <p>@example.domain.com</p>
-                </li>
-                <li class="active"><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a> </li>
-                <li><a class="ajax-link" href="#"><%= icon 'envelope-o' %><span> MailList</span></a></li>
-                <li><a class="ajax-link" href="#"><%= icon 'history' %><span> History</span></a></li>
-                <li><a class="ajax-link" href="form.html"><%= icon 'cog' %><span> Setting</span></a></li>
-              </ul>
-            </div>
+            <%= render "sidebar" %>
           </div><!-- /.sidebar-nav -->
         </div><!-- /.col-""-" -->
 
-        <div id="content" class="col-lg-10 col-sm-10"><!-- content starts -->
+        <div id="content" class="col-lg-10 col-sm-10">
           <ul class="breadcrumb">
             <li>
               <a href="#">Home</a>
