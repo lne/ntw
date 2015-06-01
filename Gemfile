@@ -17,6 +17,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'font-awesome-sass', '~> 4.3.0'
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'jquery-countdown-rails'
 # This gem gives you complete # scss versions of bootswatches for use.
 #gem 'bootswatch-rails'
 # Chosen is a library for making long, unwieldy select boxes more user friendly.
