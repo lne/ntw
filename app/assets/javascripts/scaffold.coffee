@@ -2,6 +2,7 @@ $(document).on "click", "#save", ->
   $("#myModal").modal("hide")
   $("#btn-save").blur()
 ready = ->
+  document.cookie = 'timezone='+jstz.determine().name()+';';
   $('.countdown').each ->
     $(this).countdown
       description: ''

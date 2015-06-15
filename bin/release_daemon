@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+begin
+  load File.expand_path("../spring", __FILE__)
+rescue LoadError
+end
+APP_PATH = File.expand_path('../../config/application', __FILE__)
+require_relative '../config/boot'
+require 'rails/commands'
+rails_root =  File.join(File.expand_path('../..', __FILE__))
+
+p Dir.pwd
+Daemons.run(
+  "#{rails_root}/bin/rails",
+#  :ARGV =>['start', '-f', '--', 'r', 'Release.foo'],
+  :app_name => "release_daemon",
+  :dir_mode => :normal,
+  :dir => "..",
+  :mode => :exec,
+  :log_dir => "../log",
+  :multiple   => true,
+  :backtrace => true,
+  :ontop => true,
+  :keep_pid_files => false
+)

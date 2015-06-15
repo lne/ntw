@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
   before_filter :set_account
   before_filter :authenticate, except: [:login, :logon, :logout]
 
+  before_filter :set_timezone
+
   def authenticate
     logger.info @account.inspect
     unless @account
@@ -16,5 +18,18 @@ class ApplicationController < ActionController::Base
 
   def set_account
     @account = session[:user]
+  end
+
+  def set_timezone
+    p cookies
+    p cookies[:timezone]
+    timezone = Time.find_zone(cookies[:timezone])
+    # client timezone
+    p timezone
+    # server time
+    p Time.now
+    # client time
+    p Time.now.in_time_zone(timezone)
+    puts "00000000000000000000000000000000"
   end
 end

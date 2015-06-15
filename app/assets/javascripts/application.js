@@ -16,3 +16,4 @@
 //= require turbolinks
 //= require jquery.countdown
 //= require scaffold
+//= require jstz-1.0.4.min
