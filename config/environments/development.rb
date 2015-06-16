@@ -47,6 +47,5 @@ Rails.application.configure do
     :domain => 'smtp.live.com',
     :authentication => 'plain',
     :user_name => 'dongfeng.wei@hotmail.com',
-    :password => '1981jessica'
   }
 end
